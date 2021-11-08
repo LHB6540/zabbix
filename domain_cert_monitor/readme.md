@@ -1,3 +1,23 @@
+# 脚本说明
+脚本1 get_expired_time.py：  
+ 
+获取指定域名、证书的剩余时间    
+
+脚本2 get_domain_day.py：    
+
+借助 get_expired_time.py 获取指定域名列表的所有到期时间并生成 Zabbix 自动发现格式的数据    
+
+脚本3 get_cert_day.py：    
+
+借助 get_expired_time.py 获取指定目录下所有证书文件的到期时间并生成 Zabbix 自动发现格式的数据   
+
+脚本4 get_signal_cert.py：    
+
+借助 get_cert_day.py 生成的数据获取单个证书的剩余有效时间   
+
+脚本5 get_signal_cert.py：   
+
+借助 get_domain_day.py 生成的数据获取单个域名使用的证书的剩余有效时间   
 # 如何使用
 1、在监控机器上下载 zabbix/domain_cert 的全部内容    
 
@@ -13,3 +33,4 @@
 5、在 Zabbix Server 的配置-模版中导入模版    
 
 6、对监控机器关联两个模版
+
