@@ -45,7 +45,7 @@ def get_domain_days(domain,port):
     ssl_expired_date = get_cert_from_endpoint(domain,port)
     # print(ssl_expired_date)
     if not ssl_expired_date:
-        return 100000
+        return 10000
     else:
         print(ssl_expired_date)
         return (ssl_expired_date-today).days

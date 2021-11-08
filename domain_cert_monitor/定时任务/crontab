@@ -1,0 +1,4 @@
+# 将目录替换为脚本存放的位置
+# 指定的监控项目更新时间是10点，提前一分钟检查，或者直接调用脚本取值，zabbix可能会超时
+59 9 * * * /usr/bin/python3 /etc/zabbix/shell/domain_cert/get_domain_day.py
+59 9 * * * /usr/bin/python3 /etc/zabbix/shell/domain_cert/get_cert_day.py

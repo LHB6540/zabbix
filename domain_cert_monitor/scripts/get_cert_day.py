@@ -7,17 +7,17 @@ from get_expired_time import get_cert_from_file
 
 
 path = "/etc/zabbix/shell/certs" #文件夹目录
-tmp_path = '/tmp/certt_info.txt'
+tmp_path = '/tmp/cert_info.tmp'
 files= os.listdir(path) #得到文件夹下的所有文件名称
 ssl_info = {"data":[]}
 
 today = datetime.datetime.today()
 for file in files: #遍历文件夹
-     if not os.path.isdir(file): 
+     if not os.path.isdir(file):
         cert_date=None
-        try: 
+        try:
             cert_date=get_cert_from_file(path+"/"+file)
-        except Exception: 
+        except Exception:
             pass
         if not cert_date:
             cert_date = 10000

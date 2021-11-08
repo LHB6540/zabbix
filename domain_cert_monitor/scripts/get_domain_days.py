@@ -2,7 +2,7 @@ from get_expired_time import get_domain_days
 import json
 
 
-tmp_path='/tmp/domain_info.txt'
+tmp_path='/tmp/domain_info.tmp'
 domain_list_path = 'domain_list.json'
 
 
