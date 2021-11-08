@@ -1,0 +1,11 @@
+{
+    "data": [
+        {
+            "domain": "www.baidu.com",
+            "port": 443
+        },
+        {
+            "domain": "www.apple.com"
+        }
+    ]
+}
